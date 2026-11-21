@@ -51,6 +51,21 @@
       max-width: 60ch;
     }
     .split__text p + p { margin-top: 1rem; }
+    
+    @media (max-width: 768px) {
+  .split {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    height: auto;
+  }
+  .split__image {
+    height: 50vh;
+  }
+  .split__text {
+    overflow: visible;
+    padding: 2rem 1.5rem;
+  }
+}
   </style>
 </head>
 <body>
