@@ -28,7 +28,7 @@
     .split__image img {
       width: 100%;
       height: 100%;
-      object-fit: contain;   
+      object-fit: contain;
       display: block;
     }
 
@@ -40,57 +40,96 @@
       min-height: 0;
       overflow-y: auto;
     }
-    .split__text h1 {
-      font-size: clamp(2rem, 4vw, 3.25rem);
-      line-height: 1.1;
-      margin-bottom: 1.25rem;
-    }
     .split__text p {
       font-size: 1.125rem;
       line-height: 1.7;
       max-width: 60ch;
     }
     .split__text p + p { margin-top: 1rem; }
-    
-   @media (max-width: 768px) {
-  .split {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    height: auto;
-  }
-  .split__image {
-    height: auto;
-  }
-  .split__image img {
-    height: auto;
-    max-height: 60vh;
-  }
-  .split__text {
-    overflow: visible;
-    justify-content: flex-start;
-    padding: 1rem 1.5rem 2rem;
-  }
-}
-  }
-  .split__image {
-    height: 50vh;
-  }
-  .split__text {
-    overflow: visible;
-    padding: 2rem 1.5rem;
-  }
-}
+
+    /* Formulaire */
+    .contact {
+      margin-top: 1rem;
+      max-width: 60ch;
+    }
+    .contact label {
+      display: block;
+      font-size: 1.125rem;
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+    }
+    .contact textarea {
+      width: 100%;
+      min-height: 10rem;
+      resize: vertical;
+      padding: 0.75rem;
+      font: inherit;
+      font-size: 1rem;
+      color: #FFFFFF;
+      background: #000000;
+      border: 1px solid #FFFFFF;
+      border-radius: 0;
+    }
+    .contact textarea:focus {
+      outline: 2px solid #FFFFFF;
+      outline-offset: 2px;
+    }
+    .contact input[type="email"] {
+      width: 100%;
+      margin-top: 0.75rem;
+      padding: 0.75rem;
+      font: inherit;
+      font-size: 1rem;
+      color: #FFFFFF;
+      background: #000000;
+      border: 1px solid #FFFFFF;
+      border-radius: 0;
+    }
+    .contact button {
+      margin-top: 0.75rem;
+      padding: 0.6rem 1.5rem;
+      font: inherit;
+      font-size: 1rem;
+      color: #000000;
+      background: #FFFFFF;
+      border: 1px solid #FFFFFF;
+      cursor: pointer;
+    }
+    .contact button:hover { background: #000000; color: #FFFFFF; }
+    .contact .hp { position: absolute; left: -9999px; }
+
+    @media (max-width: 768px) {
+      .split {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        height: auto;
+      }
+      .split__image { height: auto; }
+      .split__image img { height: auto; max-height: 60vh; }
+      .split__text {
+        overflow: visible;
+        justify-content: flex-start;
+        padding: 1rem 1.5rem 2rem;
+      }
+    }
   </style>
 </head>
 <body>
   <main class="split">
     <div class="split__image">
-      <img src="toutestavendretoutestcommun.png">
+      <img src="toutestavendretoutestcommun.png" 
     </div>
 
     <section class="split__text">
       <p>tout est à vendre – critique et liquidation par rafales d’images, films, séries, de tous les reels et autres idéologies qu’on nous vend</p>
-      <p>écrivez à toutestavendre22@gmail.com pour vider vos propres stocks</p>
+
+      <form class="contact" action="https://formspree.io/f/xoedkqqn" method="POST">
+        <label for="message">écrivez-nous pour vider vos propres stocks</label>
+        <textarea id="message" name="message" required></textarea>
+        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
+        <button type="submit">envoyer</button>
+      </form>
+
       <p>-> 21/11/2026 : deux films de Peter Watkins qui imaginent la guerre nucléaire</p>
     </section>
   </main>
