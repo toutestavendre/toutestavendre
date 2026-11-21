@@ -52,11 +52,25 @@
     }
     .split__text p + p { margin-top: 1rem; }
     
-    @media (max-width: 768px) {
+   @media (max-width: 768px) {
   .split {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     height: auto;
+  }
+  .split__image {
+    height: auto;
+  }
+  .split__image img {
+    height: auto;
+    max-height: 60vh;
+  }
+  .split__text {
+    overflow: visible;
+    justify-content: flex-start;
+    padding: 1rem 1.5rem 2rem;
+  }
+}
   }
   .split__image {
     height: 50vh;
