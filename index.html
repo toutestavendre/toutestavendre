@@ -128,7 +128,7 @@
       <p>tout est à vendre – critique et liquidation par rafales d’images, films, séries, de tous les reels et autres idéologies qu’on nous vend</p>
 
       <form class="contact" action="https://formspree.io/f/xoedkqqn" method="POST">
-        <label for="message">écrivez-nous pour vider vos propres stocks. la vraie critique ne peut être que collective, à qui d'autre elle pourrait parler ?\nce site peut être construit par n'importe-qui voulant liquider boutiques et médias, barricader ruelles et algorithmes</label>
+        <label for="message">écrivez-nous pour vider vos propres stocks.<br>ce site peut être construit par n'importe-qui voulant liquider boutiques et médias, barricader ruelles et algorithmes</label>
         <textarea id="message" name="message" required></textarea>
         <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
         <button type="submit">envoyer</button>
@@ -154,7 +154,7 @@
         });
 
         if (response.ok) {
-          status.textContent = "publication après relecture\nce n'est pas une modération c'est la construction d'un bloc de textes pour imposer l'idée du commun,";
+          status.textContent = "publication après relecture\nce n'est pas une modération c'est la construction d'un bloc de textes pour imposer l'idée du commun,\nla vraie critique ne peut être que collective, à qui d'autre elle pourrait parler ?";
           form.reset();
         } else {
           status.textContent = "ça s'envoie pas recommence stp";
