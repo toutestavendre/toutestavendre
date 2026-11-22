@@ -11,13 +11,26 @@
       font-family: "Cascadia Code", "Cascadia Mono", Consolas, "Courier New", monospace;
       color: #FFFFFF;
       background: #000000;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
     }
 
+    .title {
+      font-family: Impact, "Arial Black", sans-serif;
+      text-transform: uppercase
+      text-align: center;
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      padding: 1.5rem 1rem 0.5rem;
+    }
+    
     .split {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       grid-template-rows: minmax(0, 1fr);
       height: 100vh;
+      flex: 1;
+      min-height: 0;
     }
 
     .split__image {
@@ -37,6 +50,8 @@
       flex-direction: column;
       justify-content: center;
       padding: clamp(2rem, 6vw, 6rem);
+      padding-top: clamp(4rem, 12vw, 10rem);
+      justify-content: flex-start;
       min-height: 0;
       overflow-y: auto;
     }
@@ -103,6 +118,7 @@
     .contact .hp { position: absolute; left: -9999px; }
 
     @media (max-width: 768px) {
+      body { height: auto; }
       .split {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
@@ -119,16 +135,18 @@
   </style>
 </head>
 <body>
+   <h1 class="title">TOUT EST A VENDRE</h1>
+  
   <main class="split">
     <div class="split__image">
       <img src="toutestavendretoutestcommun.png">
     </div>
 
     <section class="split__text">
-      <p>tout est à vendre – critique et liquidation par rafales d’images, films, séries, de tous les reels et autres idéologies qu’on nous vend</p>
+      <p>critique et liquidation par rafales d’images, films, séries, de tous les reels et autres idéologies qu’on nous vend</p>
 
       <form class="contact" action="https://formspree.io/f/xoedkqqn" method="POST">
-        <label for="message">écrivez-nous pour vider vos propres stocks.<br>ce site peut être construit par n'importe-qui voulant liquider boutiques et médias, barricader ruelles et algorithmes</label>
+        <label for="message">écrivez-nous pour vider vos propres stocks.<br>ce site peut être construit par n'importe-qui voulant liquider boutiques et médias/barricader ruelles et algorithmes</label>
         <textarea id="message" name="message" required></textarea>
         <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
         <button type="submit">envoyer</button>
